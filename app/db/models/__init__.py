@@ -7,6 +7,5 @@ from .base import (
 )
 
 from .data import GameBarDB
-print(Session, Base, engine, create_db(), drop_db())
 
-create_db()
+
