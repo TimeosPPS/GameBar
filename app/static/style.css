@@ -1,0 +1,47 @@
+body{
+ background: #DEDFE1;
+}
+
+.text {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: left;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #EC2227;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}
