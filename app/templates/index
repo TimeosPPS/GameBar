@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
+    <style>
+        card{
+
+
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" alt="Логотип" class="logo">
+        <span class="text">GameBar</span>
+    </div>
+    <a href="#" class="games">Игры</a>
+    <a href="#" class="shop">Магазин</a>
+    <a href="#" class="news">Новости</a>
+
+</nav>
+
+</body>
+</html>
+  
