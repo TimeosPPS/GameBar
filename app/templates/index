@@ -6,11 +6,15 @@
     <title>GameBar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
+    <link href="./output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
 </head>
 <body>
+
 <nav>
     <div class="logo-container">
-        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" alt="Логотип" class="logo">
+        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
     </div>
     <a href="#" class="games">Игры</a>
@@ -18,6 +22,32 @@
     <a href="#" class="news">Новости</a>
 </nav>
 
+<div class="image">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Tf2_standalonebox.jpg" alt="Team Forest 2 (1)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg"
+         alt="Red Dead Redemption 2 (2)">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/d/d7/Bioshockcoverfinalcropped.jpg" alt="bioShock (3)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg"
+         alt="Elden Ring: Shadow of the Erdtree  (4)">
+    <img src="https://assets-prd.ignimgs.com/2021/08/19/elder-scrolls-skyrim-button-2017-1629409446732.jpg"
+         alt="The Elder Scrolls V: Skyrim (5)">
+    <img src="https://upload.wikimedia.org/wikipedia/ru/f/f4/Minecraft_Cover_Art.png" alt="minecraft (6)">
+</div>
+<h2> Тренды игрового мира</h2>
+
+<div class="image2">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg"
+         alt="Half-Life 2 (1)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/91/Systemshock2box.jpg"
+         alt="System Shock 2(2)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/be/OkamiNTSCcoverFinal.jpg"
+         alt=" Okami HD(3)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Baldur%27s_Gate_3_cover_art.jpg"
+         alt=" Baldur's Gate 3(4)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Disco_Elysium_Poster.jpeg"
+         alt="Disco Elysium: The Final Cut(5)">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png"
+         alt="The Elder Scrolls V: Skyrim (6)">
+</div>
 </body>
 </html>
-  
