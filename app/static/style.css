@@ -2,6 +2,14 @@ body {
     background: #DEDFE1;
 }
 
+/*text*/
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 300px; /*сверху */
+}
+
 .text {
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -9,7 +17,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
+/*xz kak nazvatb*/
 nav {
     display: flex;
     background-color: #262626;
@@ -33,7 +41,7 @@ nav a {
 nav a:hover {
     color: #EC2227;
 }
-
+/*logo*/
 .logo-container {
     display: flex;
     align-items: center;
@@ -62,13 +70,13 @@ nav a:hover {
 
 .image img {
     display: flex;
-    border-radius: 10px; /*круглие углы*/
+    border-radius: 15px; /*круглие углы*/
     width: 200px;
-    height: 300px;
+    height: 250px;
     object-fit: cover; /*сужает*/
     transition: transform 0.4s ease;
     margin-left: 50px;
-    margin-top: 500px;
+    margin-top: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
 
@@ -78,29 +86,12 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-button:hover {
-    background-color: #555; /* Темніший фон при наведенні */
-}
-.sing {
-    width: 40px;
-    height: auto;
-    margin-right: 5px;
-    transition: transform 0.3s ease;
-}
-/* Тренды игрового мира */
-h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2rem;
-    text-align: left;
-    margin-top: 300px; /*сверху */
-}
-
 .image2 {
     display: flex;
     align-items: center;
     width: 200px;
-    height: 300px;
-    border-radius: 10px;
+    height: 250px;
+    border-radius: 15px;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
     transition: transform 0.3s ease;
     margin-left: 50px;
@@ -111,13 +102,13 @@ h2 {
 
 .image2 img {
     display: flex;
-    border-radius: 10px; /*круглие углы*/
+    border-radius: 15px; /*круглие углы*/
     width: 200px;
-    height: 300px;
+    height: 250px;
     object-fit: cover; /*сужает*/
     transition: transform 0.4s ease;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 150px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 }
@@ -125,3 +116,5 @@ h2 {
 .image2 img:hover {
     transform: scale(1.05);
 }
+
+/*search...*/
