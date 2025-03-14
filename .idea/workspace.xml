@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="78d3c232-16fd-41eb-b0aa-3264c94694a9" name="Changes" comment="commit">
       <change afterPath="$PROJECT_DIR$/ыы.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
     </list>
     <list id="51f1dc65-a240-4c10-9145-3984618dd920" name="Changes by Time Conqueror" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741730379954</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <option name="closed" value="true" />
+      <created>1741974092567</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741974092568</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
