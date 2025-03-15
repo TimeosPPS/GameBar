@@ -22,9 +22,11 @@
 <div class="image">
     {% for game in random_games %}
     <div class="game">
-        <img src="{{ game.picture }}" alt="{{ game.name }}">
-        <h3>{{ game.name }}</h3>
-        <p> Rating: {{ game.rating }}</p>
+        <a href="">
+            <img src="{{ game.picture }}" alt="{{ game.name }}">
+            <h3>{{ game.name }}</h3>
+            <p>Rating: {{ game.rating }}</p>
+        </a>
     </div>
     {% endfor %}
 </div>
@@ -33,15 +35,13 @@
 
 <div class="image2">
     {% for game in top %}
-    <a>
+    <a href="">
         <img src="{{ game.picture }}" alt="{{ game.name }}">
         <h3>{{ game.name }}</h3>
         <p>Rating: {{ game.rating }}</p>
     </a>
     {% endfor %}
 </div>
-
+    
 </body>
 </html>
-
-
