@@ -1,23 +1,32 @@
 body {
     background: #DEDFE1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
 
-/*text*/
+
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 2rem;
-    text-align: left;
-    margin-top: 300px; /*сверху */
+    margin-top: 300px;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #292929;
 }
+
 
 .text {
     text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
     font-size: 20px;
     font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
 }
-/*xz kak nazvatb*/
+
+
 nav {
     display: flex;
     background-color: #262626;
@@ -25,14 +34,13 @@ nav {
     border-radius: 3px;
     justify-content: center;
     align-items: center;
-    text-align: left;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: inline-flex;
     align-items: center;
     margin-left: 20px;
@@ -41,80 +49,91 @@ nav a {
 nav a:hover {
     color: #EC2227;
 }
-/*logo*/
+
+/* logo */
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .logo {
-    width: 40px;
-    height: auto;
-    margin-right: 5px;
+    width: 70px;
+    height: 50px;
+    margin-right: 20px;
 }
 
-.image {
+/* Search */
+.input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Карточки */
+.image{
     display: flex;
-    align-items: center;
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-    transition: transform 0.3s ease;
-    margin-left: 50px;
-    line-height: 1.2;
+    justify-content: center;
     gap: 10px;
-    margin: 20px;
+    padding: 20px;
 }
 
-.image img {
-    display: flex;
-    border-radius: 15px; /*круглие углы*/
+.game {
+    background: #292929;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
     width: 200px;
-    height: 250px;
-    object-fit: cover; /*сужает*/
-    transition: transform 0.4s ease;
-    margin-left: 50px;
-    margin-top: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.image img:hover {
+.game:hover {
     transform: scale(1.05);
 }
 
-.image2 {
-    display: flex;
-    align-items: center;
+.game img {
     width: 200px;
     height: 250px;
     border-radius: 15px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
-    transition: transform 0.3s ease;
-    margin-left: 50px;
-    line-height: 1.2;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game img:hover {
+    transform: scale(1.05);
+}
+/* Карточки 2 */
+.image2 {
+    display: flex;
+    justify-content: center;
     gap: 10px;
-    margin: 20px;
+    padding: 20px;
+}
+
+.a {
+    background: #292929;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.a:hover {
+    transform: scale(1.05);
 }
 
 .image2 img {
-    display: flex;
-    border-radius: 15px; /*круглие углы*/
     width: 200px;
     height: 250px;
-    object-fit: cover; /*сужает*/
+    border-radius: 15px;
     transition: transform 0.4s ease;
-    margin-left: 50px;
-    margin-top: 150px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    background-color: #fff;
 }
 
 .image2 img:hover {
     transform: scale(1.05);
 }
-
-/*search...*/
