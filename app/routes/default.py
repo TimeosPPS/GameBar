@@ -17,21 +17,17 @@ def main_page():
 
 
 @app.get("/catalog/")
-def games_list():
+def catalog():
     sort_by = request.args.get('sort_by', '')
-    games = session.query(GameBarDB)
-    games = get_sorted_query(games, sort_by)
-    return render_template("catalog.html", games=games.all())
+    filter_param = request.args.get('filter', '')
+    games_query = session.query(GameBarDB)
+    if filter_param:
+        genres = filter_param.split(",")
+        games_query = games_query.filter(GameBarDB.genre.in_(genres))
+    games_query = get_sorted_query(games_query, sort_by)
+    games = games_query.all()
 
-
-@app.get("/catalog/filter=<filter>/")
-def catalog_filter(filter):
-    genres = filter.split(",")
-    sort_by = request.args.get('sort_by', '')
-    filtered = session.query(GameBarDB).filter(GameBarDB.genre.in_(genres))
-    filtered = get_sorted_query(filtered, sort_by)
-
-    return render_template("catalog.html", games=filtered.all())
+    return render_template("catalog.html", games=games)
 
 @app.get("/game/<id>/")
 def game_page(id):
