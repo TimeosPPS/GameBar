@@ -18,6 +18,11 @@ def main_page():
 def games_list():
     games = session.query(GameBarDB)
     return render_template("catalog.html", games=games)
+@app.get("/catalog/filter=<filter>/")
+def catalog_filter(filter):
+    genres = filter.split(",")
+    filtered = session.query(GameBarDB).filter(GameBarDB.genre.in_(genres)).all()
+    return render_template("catalog.html", games=filtered)
 
 @app.get("/game/<id>/")
 def game_page(id):
