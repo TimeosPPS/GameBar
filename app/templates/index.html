@@ -13,21 +13,21 @@
         <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
     </div>
-    <a href="#" class="games">Games Calatog</a>
+    <a href="/catalog/" class="games">Games Calatog</a>
     <a href="#" class="shop">My Cart</a>
     <a href="#" class="news">News</a>
-    <input class="input" name="text" placeholder="Search..." type="search">
+    <div class="input">
+        <input type="text" placeholder="Search..." name="text" class="inputik">
+    </div>
 </nav>
 
 <div class="image">
     {% for game in random_games %}
-    <div class="game">
-        <a href="">
+        <a href="/game/{{ game.id }}/" class="game">
             <img src="{{ game.picture }}" alt="{{ game.name }}">
             <h3>{{ game.name }}</h3>
             <p>Rating: {{ game.rating }}</p>
         </a>
-    </div>
     {% endfor %}
 </div>
 
@@ -35,13 +35,13 @@
 
 <div class="image2">
     {% for game in top %}
-    <a href="">
+    <a href="/game/{{ game.id }}/" class="a">
         <img src="{{ game.picture }}" alt="{{ game.name }}">
         <h3>{{ game.name }}</h3>
         <p>Rating: {{ game.rating }}</p>
     </a>
     {% endfor %}
 </div>
-    
+
 </body>
 </html>
