@@ -1,1 +1,36 @@
-<img src="{{ games[500].picture }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games Catalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_catalog.css') }}">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/JsLZW8vR/2025-03-16-152817945.png">
+
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+            <span class="text">GameBar</span>
+        </div>
+        <a href="/catalog/" class="games">Games Catalog</a>\
+        <a href="/" class="news">Home page</a>
+        <a href="#" class="shop">My Cart</a>
+        <a href="#" class="news">News</a>
+        <a href="/" class="news">home page</a>
+        <input class="input" name="text" placeholder="Search..." type="search">
+    </nav>
+<div class="image">
+    {% for game in games %}
+    <div class="game">
+        <a href="/game/{{ game.id }}/">
+            <img src="{{ game.picture }}" alt="{{ game.name }}">
+            <h3>{{ game.name }}</h3>
+            <p>Rating: {{ game.rating }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
