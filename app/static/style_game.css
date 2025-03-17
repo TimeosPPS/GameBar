@@ -1,0 +1,129 @@
+body {
+    background: #DEDFE1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: center;
+    color: #292929;
+}
+h3{
+    text-decoration: none;
+    color: white;
+
+}
+p{
+    text-decoration: none;
+    color: white;
+
+}
+
+.text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    background-color: #262626;
+    padding: 10px 20px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #EC2227;
+}
+
+/* logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 50px;
+    margin-right: 20px;
+   text-decoration: none;
+}
+
+/*Game*/
+.game {
+    display: flex;
+    flex-direction: column; /* колонка */
+    align-items: center; /* Центр */
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+
+}
+
+.image {
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+}
+
+.gameinfo {
+    text-align: center; /* Центр */
+}
+
+.gameinfo h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: oklch(0.147 0.004 49.25);
+    font-weight: bold;
+}
+
+.gameinfo p {
+    font-size: 16px;
+    margin: 5px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #262626;
+    color: oklch(0.985 0 0);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer; /* Рука */
+    text-decoration: none;
+    margin: 20px 0; /*верх и сниз*/
+}
+
+.buy-button :hover {
+    background-color: oklch(0.505 0.213 27.518);
+    color: oklch(0.985 0.001 106.423);
+}
