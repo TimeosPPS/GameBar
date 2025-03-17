@@ -1,1 +1,38 @@
-{{name}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_game.css') }}">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
+</head>
+<body>
+
+<nav>
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+        <span class="text">GameBar</span>
+    </div>
+    <a href="/catalog/" class="games">Games Catalog</a>
+    <a href="/" class="news">Home page</a>
+    <a href="#" class="shop">My Cart</a>
+    <a href="#" class="news">News</a>
+    <input class="input" name="text" placeholder="Search..." type="search">
+</nav>
+
+
+<div class="game">
+    <img src="{{ picture }}" alt="{{ name }}" class="">
+    <div class="gameinfo">
+        <h1>{{ name }}</h1>
+        <p>Genre{{ genre }}</p>
+        <p>Rating: {{ rating }}</p>
+        <div class="ml-2 ...">
+            <p class="desc">{{ description }}</p>
+            <a href="#" class="buy-button">Buy now</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
