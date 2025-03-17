@@ -20,10 +20,16 @@ def main_page():
 def catalog():
     sort_by = request.args.get('sort_by', '')
     filter_param = request.args.get('filter', '')
+    search = request.args.get('search', '')
     games_query = session.query(GameBarDB)
+
+    if search:
+        games_query=games_query.filter(GameBarDB.name.ilike(f"%{search}%"))
+
     if filter_param:
         genres = filter_param.split(",")
         games_query = games_query.filter(GameBarDB.genre.in_(genres))
+
     games_query = get_sorted_query(games_query, sort_by)
     games = games_query.all()
 
