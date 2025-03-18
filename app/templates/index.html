@@ -6,6 +6,12 @@
     <title>GameBar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+
 </head>
 <body>
 <nav>
@@ -13,21 +19,21 @@
         <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
     </div>
-    <a href="/catalog/" class="games">Games Calatog</a>
+    <a href="/catalog/" class="games">Games Catalog</a>
     <a href="#" class="shop">My Cart</a>
     <a href="#" class="news">News</a>
-    <div class="input">
-        <input type="text" placeholder="Search..." name="text" class="inputik">
-    </div>
+    <form method="get" action="/catalog/">
+        <input class="input" name="search" placeholder="Search..." type="search">
+    </form>
 </nav>
 
 <div class="image">
     {% for game in random_games %}
-        <a href="/game/{{ game.id }}/" class="game">
-            <img src="{{ game.picture }}" alt="{{ game.name }}">
-            <h3>{{ game.name }}</h3>
-            <p>Rating: {{ game.rating }}</p>
-        </a>
+    <a href="/game/{{ game.id }}/" class="game">
+        <img src="{{ game.picture }}" alt="{{ game.name }}">
+        <h3>{{ game.name }}</h3>
+        <p>Rating: {{ game.rating }}</p>
+    </a>
     {% endfor %}
 </div>
 
