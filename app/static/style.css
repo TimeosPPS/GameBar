@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  /*не обязательноооо*/
+
 body {
     background: #DEDFE1;
     font-family: Arial, sans-serif;
@@ -5,27 +9,38 @@ body {
     padding: 0;
     color: #fff;
 }
-
+.input {
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color:oklch(0.577 0.245 27.325);
+}
 
 h2 {
     font-family: Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 300px;
-    text-align: center;
     font-size: 28px;
     margin-top: 20px;
+    text-align: center;
     color: #292929;
 }
+h3{
+    text-decoration: none;
+    color: white;
 
+}
+p{
+    text-decoration: none;
+    color: white;
+
+}
 
 .text {
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    font-size: 1.5rem;
 }
-
 
 nav {
     display: flex;
@@ -54,28 +69,23 @@ nav a:hover {
 .logo-container {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo {
     width: 70px;
     height: 50px;
     margin-right: 20px;
+   text-decoration: none;
 }
-
-/* Search */
-.input {
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-/* Карточки */
-.image{
+/* Карточки игр */
+.image {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
+    text-decoration: none;
 }
 
 .game {
@@ -86,29 +96,34 @@ nav a:hover {
     width: 200px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .game:hover {
     transform: scale(1.05);
 }
 
-.game img {
+.image img {
     width: 200px;
     height: 250px;
     border-radius: 15px;
     transition: transform 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
-.game img:hover {
+.image img:hover {
     transform: scale(1.05);
 }
-/* Карточки 2 */
+
+/* Карточки игр2 */
 .image2 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
+    text-decoration: none;
 }
 
 .a {
@@ -119,6 +134,7 @@ nav a:hover {
     width: 200px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .a:hover {
@@ -131,7 +147,7 @@ nav a:hover {
     border-radius: 15px;
     transition: transform 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    text-decoration: none;
 }
 
 .image2 img:hover {
