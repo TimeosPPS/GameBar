@@ -2,18 +2,40 @@ from flask import render_template, request
 from app import app
 from sqlalchemy.orm import Session
 from sqlalchemy import desc, asc, func
-from app.db.models.base import engine
-from app.db.models.data import GameBarDB
+from app.db.models.base import engine,engine_users
+from app.db.models.data import GameBarDB, UserRecs
 from .utils import get_sorted_query
 
 import requests
-
+session_db = Session(engine_users)
 session = Session(engine)
 @app.get("/")
 def main_page():
+    user = request.remote_addr
+    top_games = None
+
+    popular_genre = (
+        session_db.query(UserRecs.genre)
+        .filter(UserRecs.user == user)
+        .group_by(UserRecs.genre)
+        .order_by(func.count(UserRecs.genre).desc())
+        .limit(1)
+        .scalar()
+    )
+
+    if popular_genre:
+        top_games = (
+            session.query(GameBarDB)
+            .filter(GameBarDB.genre == popular_genre)
+            .order_by(GameBarDB.rating.desc())
+            .limit(6)
+            .all()
+        )
+
+
     random_games = session.query(GameBarDB).order_by(func.random()).limit(6).all()
     top = session.query(GameBarDB).order_by(desc(GameBarDB.rating)).limit(6).all()
-    return render_template("index.html", top=top, random_games=random_games)
+    return render_template("index.html", top=top, random_games=random_games, recs=top_games)
 
 
 @app.get("/catalog/")
@@ -38,6 +60,10 @@ def catalog():
 @app.get("/game/<id>/")
 def game_page(id):
     game = session.query(GameBarDB).filter(GameBarDB.id == id).first()
+    user = request.remote_addr
+    new_user = UserRecs(user=user, genre=game.genre)
+    session_db.add(new_user)
+    session_db.commit()
     return render_template("game.html",
                            name=game.name,
                            description=game.description,

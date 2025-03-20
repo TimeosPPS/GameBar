@@ -12,4 +12,8 @@ class GameBarDB(Base):
     rating: Mapped[int] = mapped_column(Integer)
     picture: Mapped[str] = mapped_column(Text)
 
-
+class UserRecs(Base):
+    __tablename__ = 'UserRec'
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user: Mapped[str] = mapped_column(Text)
+    genre: Mapped[str] = mapped_column(Text)

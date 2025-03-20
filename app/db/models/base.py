@@ -10,16 +10,20 @@ from sqlalchemy.orm import(
 
 
 DB = "sqlite:///app.db"
+DB_USERS = "sqlite:///users.db"
 
 engine = create_engine(DB, echo=True)
+engine_users = create_engine(DB_USERS, echo=True)
 
 Session = sessionmaker(bind=engine)
+SessionUsers = sessionmaker(bind=engine_users)
 
 class Base(DeclarativeBase):
     ...
 
 def create_db():
     Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine_users)
 
 
 def fill_db(games, GameBarDB):
@@ -37,4 +41,4 @@ def fill_db(games, GameBarDB):
     session.commit()
     session.close()
 def drop_db():
-    Base.metadata.drop_all(engine)
+    Base.metadata.drop_all(engine_users)
