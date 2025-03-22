@@ -16,4 +16,5 @@ class UserRecs(Base):
     __tablename__ = 'UserRec'
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     user: Mapped[str] = mapped_column(Text)
-    genre: Mapped[str] = mapped_column(Text)
+    genre: Mapped[str] = mapped_column(Text, nullable=True, default="")
+    favourite: Mapped[str] = mapped_column(Text, nullable=True, default="")
