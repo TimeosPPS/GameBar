@@ -14,25 +14,24 @@
         <span class="text">GameBar</span>
     </div>
     <a href="/catalog/" class="games">Games Catalog</a>
-    <a href="/" class="news">Home page</a>
-    <a href="#" class="shop">My Cart</a>
+    <a href="/" class="home">Home page</a>
+    <a href="/favourite" class="fav">Fav Game</a>
     <a href="#" class="news">News</a>
     <form method="get" action="/catalog/">
         <input class="input" name="search" placeholder="Search..." type="search">
     </form>
 </nav>
 
-
 <div class="game">
-    <img src="{{ picture }}" alt="{{ name }}" class="">
     <div class="gameinfo">
         <h1>{{ name }}</h1>
+        <img src="{{ picture }}" alt="{{ name }}" class="image">
         <p>Genre: {{ genre }}</p>
         <p>Rating: {{ rating }}</p>
-        <div class="ml-2 ...">
             <p class="desc">{{ description }}</p>
-            <a href="#" class="buy-button">Buy now</a>
-        </div>
+    <form method="POST" action="/game/{{ id }}/save/">
+        <button type="submit">Add to My Favs</button>
+    </form>
     </div>
 </div>
 
