@@ -1,9 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     background: #DEDFE1;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
+}
+.input {
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color:oklch(0.577 0.245 27.325);
+    text-align: left;
+
 }
 
 h2 {
@@ -12,6 +25,8 @@ h2 {
     margin-top: 20px;
     text-align: center;
     color: #292929;
+    font-weight: bold;
+
 }
 h3{
     text-decoration: none;
@@ -76,7 +91,7 @@ nav a:hover {
     gap: 20px;
     padding: 20px;
     border-radius: 15px;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 20px auto;
@@ -109,10 +124,10 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.buy-button {
+.submit {
     margin-top: 40px;
     padding: 10px 20px;
-    background-color: #262626;
+    background-color: oklch(0.269 0 0);
     color: oklch(0.985 0 0);
     font-size: 15px;
     font-weight: bold;
@@ -120,10 +135,31 @@ nav a:hover {
     text-align: center;
     cursor: pointer; /* Рука */
     text-decoration: none;
-    margin: 20px 0; /*верх и сниз*/
+    margin: 20px 0; /* Верх і низ */
+    border: none; /*нет бортикам*/
 }
 
-.buy-button :hover {
+.submit:hover {
     background-color: oklch(0.505 0.213 27.518);
     color: oklch(0.985 0.001 106.423);
+}
+button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: oklch(0.269 0 0);
+    color: oklch(0.985 0 0);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer; /* Рука */
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0.4rem #dfd9d9;
+}
+
+button:hover {
+    background-color: #b91d1d;
+    transform: translateY(3px);
+    box-shadow: none;
 }
