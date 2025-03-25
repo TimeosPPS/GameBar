@@ -84,7 +84,8 @@ def game_page(id):
         description=game.description,
         genre=game.genre,
         rating=game.rating,
-        picture=game.picture
+        picture=game.picture,
+        id=id
     )
 
 
@@ -106,7 +107,8 @@ def save_game(id):
             session_db.commit()
 
         return redirect(f"/game/{id}/")
-    return flash("You must login first")
+    flash("You must login first")
+    return redirect(f"/game/{id}/")
 
 
 @app.post("/game/<id>/delete/")
@@ -123,7 +125,7 @@ def delete_game(id):
             session_db.delete(existing_rec)
             session_db.commit()
 
-        return redirect(f"/game/{id}/")
+        return redirect("/favourite/")
     return flash("You must login first")
 
 
