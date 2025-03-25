@@ -11,8 +11,3 @@ def get_sorted_query(query, sort_by):
         return query.order_by(asc(GameBarDB.rating))
     return query
 
-def get_user():
-    user = str(uuid.uuid4())
-    resp = make_response(redirect(url_for('main_page')))
-    resp.set_cookie('user_id', user, max_age=30 * 24 * 60 * 60)
-    return resp

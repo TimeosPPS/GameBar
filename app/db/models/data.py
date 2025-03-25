@@ -1,6 +1,6 @@
 from . import Base
-from sqlalchemy import Integer, String, Text
-from sqlalchemy.orm import mapped_column, Mapped, declarative_base
+from sqlalchemy import Integer, Text
+from sqlalchemy.orm import mapped_column, Mapped
 
 class GameBarDB(Base):
     __tablename__ = 'GameBar'

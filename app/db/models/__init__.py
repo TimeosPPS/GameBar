@@ -1,11 +1,12 @@
 from .base import (
-    Session,
+    Session, Session_users,
     Base,
     engine,
     create_db,
-    drop_db, fill_db
+    drop_db
 )
 
-from .data import GameBarDB
+from .data import GameBarDB, UserRecs
+from .user import User
 
 
