@@ -8,6 +8,8 @@ from app.db.models.data import GameBarDB, UserRecs
 from .utils import get_sorted_query
 from loguru import logger
 
+import requests
+
 session_db = Session(engine_users_story)
 session = Session(engine)
 
@@ -139,6 +141,21 @@ def get_favourite():
     games = session.query(GameBarDB).filter(GameBarDB.name.in_(favourite_game_names)).all()
 
     return render_template("favourite.html", games=games, user=user)
+
+@app.get("/news/")
+def news_page():
+    URL = "https://newsapi.org/v2/everything"
+    PARAMS = {
+        "q": "video games",
+        "language": "en",
+        "sortBy": "publishedAt",
+        "apiKey": "002fc2c78b17452cb74f89af92fc0646"
+    }
+    response = requests.get(URL, params=PARAMS)
+    data = response.json()
+
+    articles = data.get("articles", [])[:12]
+    return render_template("news.html", articles=articles)
 
 @app.route("/logout/")
 @login_required
