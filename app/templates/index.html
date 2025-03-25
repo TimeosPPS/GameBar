@@ -6,12 +6,8 @@
     <title>GameBar</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
-    <link href="src/output.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="/output.css" rel="stylesheet">
-    <link href="./output.css" rel="stylesheet">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
 </head>
 <body>
 <nav>
@@ -19,14 +15,15 @@
         <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
     </div>
-    <a href="/catalog/" class="games">Games Catalog</a>
-    <a href="#" class="shop">My Cart</a>
+    <a href="/catalog/" class="games">Games</a>
+    <a href="/favourite" class="fav">Fav</a>
     <a href="#" class="news">News</a>
     <form method="get" action="/catalog/">
         <input class="input" name="search" placeholder="Search..." type="search">
     </form>
 </nav>
 
+<h2 class="text-2xl font-bold mt-5 text-center text-[#292929] bg-sky-500/80">Recommended Games</h2>
 <div class="image">
     {% for game in random_games %}
     <a href="/game/{{ game.id }}/" class="game">
@@ -37,8 +34,18 @@
     {% endfor %}
 </div>
 
-<h2>Top games</h2>
+<h2 class="text-2xl font-bold mt-5 text-center text-[#292929]" style="background: oklch(0.704 0.191 22.216)">Random Games</h2>
+<div class="image">
+    {% for game in random_games %}
+    <a href="/game/{{ game.id }}/" class="game">
+        <img src="{{ game.picture }}" alt="{{ game.name }}">
+        <h3>{{ game.name }}</h3>
+        <p>Rating: {{ game.rating }}</p>
+    </a>
+    {% endfor %}
+</div>
 
+<h2 class="text-2xl font-bold mt-5 text-center text-[#292929] bg-[oklch(0.704_0.191_22.216)]">Top Games</h2>
 <div class="image2">
     {% for game in top %}
     <a href="/game/{{ game.id }}/" class="a">
@@ -48,6 +55,22 @@
     </a>
     {% endfor %}
 </div>
+
+<div id="welcome" class="popup">
+    <div class="content">
+        <p class="text-2xl font-bold">🚨 Attention, attention! Website update! 🚨</p>
+        <p class="mt-4">Мы рады сообщить, что наш сайт был обновлён с новыми функциями!Благодарим за ваше терпение и
+            поддержку!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+    function closePopup() {
+        document.getElementById('welcome').style.display = 'none';
+        localStorage.setItem('popupClosed', 'true');
+    }
+</script>
 
 </body>
 </html>
