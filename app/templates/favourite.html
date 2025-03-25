@@ -1,1 +1,41 @@
-{{ games[0].name }}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_favourite.css') }}">
+</head>
+<body>
+<nav>
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+        <span class="text">GameBar</span>
+    </div>
+    <a href="/catalog/" class="games">Games</a>
+    <a href="/favourite" class="fav">Fav</a>
+    <a href="#" class="news">News</a>
+    <form method="get" action="/catalog/">
+        <input class="input" name="search" placeholder="Search..." type="search">
+    </form>
+</nav>
+{% if games %}
+<ul>
+    {% for game in games %}
+    <li>
+        <h2>{{ game.name }}</h2>
+        <img src="{{ game.picture }}" alt="{{ game.name }}" class="image">
+        <form method="POST" action="/game/{{ game.id }}/delete/">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<a><img src='https://i.postimg.cc/nMTXM5yB/photo-2025-03-24-00-25-00.jpg' class="images" /></a>
+<p> 🚫Nothing Here... Yet!</p>
+{% endif %}
+
+
+</body>
+</html>
