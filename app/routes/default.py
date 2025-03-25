@@ -156,7 +156,6 @@ def news_page():
 
     articles = data.get("articles", [])[:12]
     return render_template("news.html", articles=articles)
-    return render_template("news.html", articles=articles)
 
 @app.route("/logout/")
 @login_required
