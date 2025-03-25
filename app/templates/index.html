@@ -28,16 +28,27 @@
         <input class="input" name="search" placeholder="Search..." type="search">
     </form>
         <div class="auth">
-        <a href="/register">Sign Up </a>
-        <a href="/login" class="login"
+        <a href="/register/">Sign Up</a>
+        <a href="#" class="login"
            style="background: oklch(0.577 0.245 27.325); border-radius: 10px; padding: 5px 10px;">Log In</a>
     </div>
 </nav>
 
+<!--<h2 class="text-2xl font-bold mt-5 text-center"-->
+<!--    style="color: oklch(0.147 0.004 49.25); background: oklch(0.709 0.01 56.259)">Recommended Games</h2>-->
+<!--<div class="image">-->
+<!--    {% for game in recommended_games %}-->
+<!--    <a href="/game/{{ game.id }}/" class="game">-->
+<!--        <img src="{{ game.picture }}" alt="{{ game.name }}">-->
+<!--        <h3>{{ game.name }}</h3>-->
+<!--        <p>Rating: {{ game.rating }}</p>-->
+<!--    </a>-->
+<!--    {% endfor %}-->
+<!--</div>-->
 <h2 class="text-2xl font-bold mt-5 text-center"
     style="color: oklch(0.147 0.004 49.25); background: oklch(0.709 0.01 56.259)">Recommended Games</h2>
 <div class="image">
-    {% for game in recommended_games %}
+    {% for game in recs %}
     <a href="/game/{{ game.id }}/" class="game">
         <img src="{{ game.picture }}" alt="{{ game.name }}">
         <h3>{{ game.name }}</h3>
