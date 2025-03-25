@@ -23,7 +23,8 @@
     </form>
 </nav>
 
-<h2 class="text-2xl font-bold mt-5 text-center text-[#292929] bg-sky-500/80">Recommended Games</h2>
+<h2 class="text-2xl font-bold mt-5 text-center"
+    style="color: oklch(0.147 0.004 49.25); background: oklch(0.709 0.01 56.259)">Recommended Games</h2>
 <div class="image">
     {% for game in random_games %}
     <a href="/game/{{ game.id }}/" class="game">
@@ -34,7 +35,9 @@
     {% endfor %}
 </div>
 
-<h2 class="text-2xl font-bold mt-5 text-center text-[#292929]" style="background: oklch(0.704 0.191 22.216)">Random Games</h2>
+<h2 class="text-2xl font-bold mt-5 text-center"
+    style="color: oklch(0.147 0.004 49.25); background:oklch(0.709 0.01 56.259)">Random Games</h2>
+
 <div class="image">
     {% for game in random_games %}
     <a href="/game/{{ game.id }}/" class="game">
@@ -45,7 +48,8 @@
     {% endfor %}
 </div>
 
-<h2 class="text-2xl font-bold mt-5 text-center text-[#292929] bg-[oklch(0.704_0.191_22.216)]">Top Games</h2>
+<h2 class="text-2xl font-bold mt-5 text-center"
+    style="color: oklch(0.147 0.004 49.25); background: oklch(0.709 0.01 56.259)">Top Games</h2>
 <div class="image2">
     {% for game in top %}
     <a href="/game/{{ game.id }}/" class="a">
@@ -66,11 +70,12 @@
 </div>
 
 <script>
-    function closePopup() {
+function closePopup() {
         document.getElementById('welcome').style.display = 'none';
         localStorage.setItem('popupClosed', 'true');
     }
 </script>
+
 
 </body>
 </html>
