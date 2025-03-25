@@ -8,6 +8,12 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+    <style>
+        .login:hover {
+            color: oklch(0.216 0.006 56.043);
+            transform: scale(1.05);
+    }
+    </style>
 </head>
 <body>
 <nav>
@@ -21,12 +27,17 @@
     <form method="get" action="/catalog/">
         <input class="input" name="search" placeholder="Search..." type="search">
     </form>
+        <div class="auth">
+        <a href="/register">Sign Up </a>
+        <a href="/login" class="login"
+           style="background: oklch(0.577 0.245 27.325); border-radius: 10px; padding: 5px 10px;">Log In</a>
+    </div>
 </nav>
 
 <h2 class="text-2xl font-bold mt-5 text-center"
     style="color: oklch(0.147 0.004 49.25); background: oklch(0.709 0.01 56.259)">Recommended Games</h2>
 <div class="image">
-    {% for game in random_games %}
+    {% for game in recommended_games %}
     <a href="/game/{{ game.id }}/" class="game">
         <img src="{{ game.picture }}" alt="{{ game.name }}">
         <h3>{{ game.name }}</h3>
@@ -70,10 +81,10 @@
 </div>
 
 <script>
-function closePopup() {
-        document.getElementById('welcome').style.display = 'none';
-        localStorage.setItem('popupClosed', 'true');
-    }
+    function closePopup() {
+            document.getElementById('welcome').style.display = 'none';
+            localStorage.setItem('popupClosed', 'true');
+        }
 </script>
 
 
