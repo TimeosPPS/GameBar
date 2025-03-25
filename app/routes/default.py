@@ -144,17 +144,18 @@ def get_favourite():
 
 @app.get("/news/")
 def news_page():
-    URL = "https://newsapi.org/v2/everything"
+    URL = "https://api.gnews.io/v4/search"
     PARAMS = {
-        "q": "video games",
-        "language": "en",
-        "sortBy": "publishedAt",
-        "apiKey": "002fc2c78b17452cb74f89af92fc0646"
+        "q": "video games industry",
+        "lang": "en",
+        "apiKey": "YOUR_API_KEY"
     }
+
     response = requests.get(URL, params=PARAMS)
     data = response.json()
 
     articles = data.get("articles", [])[:12]
+    return render_template("news.html", articles=articles)
     return render_template("news.html", articles=articles)
 
 @app.route("/logout/")
