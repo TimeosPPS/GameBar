@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+            <span class="text">Login</span>
+        </div>
+    </nav>
+
+    <form id="loginForm" method="POST" action="{{ url_for('login') }}" class="form">
+
+        {{ form.hidden_tag() }}
+
+        <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Enter Your Account</p>
+
+        <div class="container">
+            <label for="nickname">Nickname</label>
+            <input type="text" id="nickname" name="nickname" required value="{{ form.nickname.data or '' }}">
+        </div>
+
+        <div class="container">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="submit" id="loginButton">Login</button>
+
+        <p class="register">
+            Don't have an account yet?
+            <a href="/register" class="mb-6 font-bold text-black underline">Sign up</a>
+        </p>
+    </form>
+</body>
+</html>
