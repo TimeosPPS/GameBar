@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #DEDFE1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.input {
+    font-family: "Montserrat", sans-serif;
+    background-color: oklch(0.439 0 0);
+    border: none;
+    padding: 7px;
+    font-size: 0.9rem;
+    width: 250px;
+    border-radius: 15px;
+    background-color: oklch(0.97 0.001 106.424);
+    color: oklch(0.374 0.01 67.558);
+    box-shadow: 0 0.4rem oklch(0.1 0.02 270);
+    cursor: pointer;
+    margin-left: 10px;
+}
+.input:focus {
+  outline-color: oklch(0.374 0.01 67.558);
+  box-shadow: none;
+}
+
+
+p{
+    text-decoration: none;
+    color: white;
+
+}
+
+.text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: oklch(0.985 0.001 106.423)
+}
+
+nav {
+    display: flex;
+    background-color: #262626;
+    padding: 10px 20px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: oklch(0.577 0.245 27.325);
+}
+
+/* logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 50px;
+    margin-right: 20px;
+    text-decoration: none;
+}
