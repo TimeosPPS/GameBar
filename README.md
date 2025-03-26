@@ -1,3 +1,4 @@
+
 <div align="center">
 
 ![Image](https://papik.pro/grafic/uploads/posts/2023-04/thumbs/1681572872_papik-pro-p-igrovoi-logotip-vektor-10.png)
@@ -26,11 +27,10 @@
 
 <p align="center">
  <a href="#Про проєкт">Про проєкт</a> •
- <a href="#features">Features</a> •
- <a href="#how-it-works">How it works</a> • 
- <a href="#tech-stack">Tech Stack</a> •  
- <a href="#author">Author</a> • 
- <a href="#user-content-license">License</a>
+ <a href="#Можливості">Можливості</a> •
+ <a href="#Створено за допомогою">Створено за допомогою</a> • 
+ <a href="#Розробники">Розробники</a> •  
+ <a href="#Контакти">Контакти</a> • 
 </p>
 
 ### Про проєкт
