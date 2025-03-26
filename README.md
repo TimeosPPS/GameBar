@@ -1,8 +1,8 @@
-
+<div align="center">
 
 ![Image](https://papik.pro/grafic/uploads/posts/2023-04/thumbs/1681572872_papik-pro-p-igrovoi-logotip-vektor-10.png)
 
-
+</div>
 
 <div align="center">
 
