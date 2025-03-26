@@ -61,6 +61,7 @@ GameBar це зручний каталог ігор створений для п
 
 ---
 ### Розробники
+
 <div style="display: flex; justify-content: center; gap: 20px;">
   <a href="https://github.com/TimeosPPS" style="text-align: center;">
     <img src="https://avatars.githubusercontent.com/u/174043632?v=4" alt="TimeosPPS" style="border-radius: 50%; width: 100px; height: 100px;">
