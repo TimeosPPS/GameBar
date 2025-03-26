@@ -11,13 +11,21 @@ body {
     text-align: center;
 }
 .input {
-    padding: 5px 10px;
-    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    background-color: oklch(0.439 0 0);
     border: none;
-    border-radius: 10px;
-    color:oklch(0.577 0.245 27.325);
-    text-align: left;
-
+    padding: 7px;
+    font-size: 0.9rem;
+    width: 250px;
+    border-radius: 15px;
+    background-color: oklch(0.97 0.001 106.424);
+    color: oklch(0.374 0.01 67.558);
+    box-shadow: 0 0.4rem oklch(0.1 0.02 270);
+    cursor: pointer;
+}
+.input:focus {
+  outline-color: oklch(0.374 0.01 67.558);
+  box-shadow: none;
 }
 
 h2 {
