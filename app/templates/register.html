@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
 
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style_register.css') }}">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
+
 <body>
     <nav>
         <div class="logo-container">
-            <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+            <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo" alt="Logo">
             <span class="text">Sign up</span>
         </div>
     </nav>
 
-    <form id="signUpForm" method="POST" action="{{ url_for('register') }}" class="form">
-        {{ form.hidden_tag() }}
+    <main>
+        <form id="signUpForm" method="POST" action="{{ url_for('register') }}" class="form">
+            {{ form.hidden_tag() }}
 
-        <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Create Your New Account Now</p>
+            <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Create Your New Account Now</p>
 
-        <div class="container">
-            <input type="text" id="nickname" name="nickname" placeholder="Set Your Username" required value="{{ form.nickname.data or '' }}">
-        </div>
+            <div class="container">
+                <label for="nickname">Username</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Set Your Username" required value="{{ form.nickname.data or '' }}" class="input-field">
+            </div>
 
-        <div class="container">
-            <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
-        </div>
+            <div class="container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" required class="input-field">
+            </div>
 
-        <div class="container">
-            <input type="password" id="password_confirm" name="password_confirm" placeholder="Enter Password Again" required>
-        </div>
+            <div class="container">
+                <label for="password_confirm">Confirm Password</label>
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="Enter Password Again" required class="input-field">
+            </div>
 
-        <button type="submit" class="submit" id="signUpButton">Sign up</button>
+            <button type="submit" class="submit" id="signUpButton">Sign up</button>
 
-        <p class="login">
-            Already have an account?
-            <a href="/login" class="mb-6 font-bold text-black underline">Login in</a>
-        </p>
-    </form>
+            <p class="login">
+                Already have an account?
+                <a href="/login" class="mb-6 font-bold text-black underline">Login in</a>
+            </p>
+        </form>
+    </main>
 </body>
+
 </html>
