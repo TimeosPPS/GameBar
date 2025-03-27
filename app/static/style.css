@@ -84,8 +84,8 @@ nav a:hover {
     text-decoration: none;
     margin-top: 10px;
     display: flex;
-    align-items: left; /* Вертикальное выравнивание элементов */
-    gap: 15px; /* Расстояние между логотипом и заголовком */
+    align-items: left
+    gap: 15px;
     margin: 0;
 }
 
@@ -185,4 +185,45 @@ nav a:hover {
 .auth a {
     padding: 5px 10px;
     text-decoration: none;
+}
+.user {
+    position: relative;
+    display: inline-block;
+}
+
+
+.logout-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    background: #262626;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user:hover .logout-form {
+    display: block;
+}
+
+.logout {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.logout:hover {
+    background-color: oklch(0.505 0.213 27.518);
+}
+
+.singup:hover {
+    color: oklch(0.216 0.006 56.043);
+    transform: scale(1.05);
 }
