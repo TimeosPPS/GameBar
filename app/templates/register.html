@@ -19,23 +19,19 @@
     </nav>
 
     <form id="signUpForm" method="POST" action="{{ url_for('register') }}" class="form">
-        <!-- CSRF Token -->
         {{ form.hidden_tag() }}
 
         <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Create Your New Account Now</p>
 
         <div class="container">
-            <label for="nickname">Nickname</label>
             <input type="text" id="nickname" name="nickname" placeholder="Set Your Username" required value="{{ form.nickname.data or '' }}">
         </div>
 
         <div class="container">
-            <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
         </div>
 
         <div class="container">
-            <label for="password_confirm">Confirm Password</label>
             <input type="password" id="password_confirm" name="password_confirm" placeholder="Enter Password Again" required>
         </div>
 
