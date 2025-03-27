@@ -62,17 +62,13 @@ GameBar це зручний каталог ігор створений для п
 ---
 ### Розробники
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <a href="https://github.com/TimeosPPS" style="text-align: center;">
-    <img src="https://avatars.githubusercontent.com/u/174043632?v=4" alt="TimeosPPS" style="border-radius: 50%; width: 100px; height: 100px;">
-    <br>
-    <sub>TimeosPPS</sub>
+<div>
+  <a href="https://github.com/TimeosPPS">
+    <img src="https://avatars.githubusercontent.com/u/174043632?v=4" width="100">
   </a>
 
-  <a href="https://github.com/pypok-1" style="text-align: center;">
-    <img src="https://avatars.githubusercontent.com/u/187442340?v=4" alt="pypok-1" style="border-radius: 50; width: 100px; height: 100px;">
-    <br>
-    <sub>pypok-1</sub>
+  <a href="https://github.com/pypok-1">
+    <img src="https://avatars.githubusercontent.com/u/187442340?v=4" width="100">
   </a>
 </div>
 
@@ -81,4 +77,4 @@ GameBar це зручний каталог ігор створений для п
 
 Telegram - [@TimeosPPS](https://t.me//TimeosPPS)
 
-Project Link - [https://github.com/github_username/repo_name](https://github.com/TimeosPPS/GameBar)
+Project Link - [https://github.com/TimeosPPS/GameBar](https://github.com/TimeosPPS/GameBar)
