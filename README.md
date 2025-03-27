@@ -70,6 +70,10 @@ GameBar це зручний каталог ігор створений для п
   <a href="https://github.com/pypok-1">
     <img src="https://avatars.githubusercontent.com/u/187442340?v=4" width="100">
   </a>
+
+  <a href="https://github.com/Timoxa5">
+    <img src="https://avatars.githubusercontent.com/u/183854806?v=4" width="100">
+  </a>
 </div>
 
 ---
