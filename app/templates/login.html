@@ -11,35 +11,44 @@
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="logo-container">
-            <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
-            <span class="text">Login</span>
-        </div>
-    </nav>
+<nav>
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
+        <span class="text">Login</span>
+    </div>
+</nav>
 
-    <form id="loginForm" method="POST" action="{{ url_for('login') }}" class="form">
+<form id="loginForm" method="POST" action="{{ url_for('login') }}" class="form" novalidate>
+    {{ form.hidden_tag() }}
 
-        {{ form.hidden_tag() }}
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-        <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Enter Your Account</p>
+    <p class="text-[20px] mb-6 font-bold text-gray-600 font-[Montserrat]">Enter Your Account</p>
 
-        <div class="container">
-            <label for="nickname">Nickname</label>
-            <input type="text" id="nickname" name="nickname" required value="{{ form.nickname.data or '' }}">
-        </div>
+    <div class="container">
+        <label for="nickname">Nickname</label>
+        <input type="text" id="nickname" name="nickname" required autocomplete="username"
+               value="{{ form.nickname.data or '' }}">
 
-        <div class="container">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
+    </div>
 
-        <button type="submit" class="submit" id="loginButton">Login</button>
+    <div class="container">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="off">
+    </div>
 
-        <p class="register">
-            Don't have an account yet?
-            <a href="/register" class="mb-6 font-bold text-black underline">Sign up</a>
-        </p>
-    </form>
+    <button type="submit" class="submit" id="loginButton">Login</button>
+
+    <p class="register">
+        Don't have an account yet?
+        <a href="/register" class="mb-6 font-bold text-black underline">Sign up</a>
+    </p>
+</form>
 </body>
 </html>
