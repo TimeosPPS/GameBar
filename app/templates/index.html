@@ -8,25 +8,9 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
-    <style>
-        .singup:hover {
-            color: oklch(0.216 0.006 56.043);
-            transform: scale(1.05);
-    }
-    </style>
 </head>
 <body>
 <nav>
-    <div class="logo-container2">
-        <img src="https://i.postimg.cc/0bQwHB59/2025-03-26-192305.png" class="logo2">
-        <h1>
-            {% if current_user.is_authenticated %}
-            Hey, {{ current_user.nickname }}! Welcome aboard!
-            {% else %}
-            Welcome! Please log in.
-            {% endif %}
-        </h1>
-    </div>
     <div class="logo-container">
         <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
@@ -40,12 +24,14 @@
 
     <div class="auth">
         {% if current_user.is_authenticated %}
-        <form method="POST" action="{{ url_for('logout') }}">
-            <button type="submit"
-                    class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none">Logout
-            </button>
-        </form>
-
+        <div class="user">
+                <span class="nickname px-4 py-2 font-bold text-[oklch(0.577 0.245 27.325)] bg-red rounded-lg cursor-pointer">
+                    {{ current_user.nickname }}
+                </span>
+            <form method="POST" action="{{ url_for('logout') }}" class="logout-form">
+                <button type="submit" class="logout">Logout</button>
+            </form>
+        </div>
         {% else %}
         <a href="/login/">Login In</a>
         <a href="/register/" class="singup"
