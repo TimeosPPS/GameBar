@@ -17,20 +17,40 @@
 </head>
 <body>
 <nav>
+    <div class="logo-container2">
+        <img src="https://i.postimg.cc/0bQwHB59/2025-03-26-192305.png" class="logo2">
+        <h1>
+            {% if current_user.is_authenticated %}
+            Hey, {{ current_user.nickname }}! Welcome aboard!
+            {% else %}
+            Welcome! Please log in.
+            {% endif %}
+        </h1>
+    </div>
     <div class="logo-container">
         <img src="https://i.postimg.cc/JyPqM2vH/2025-03-09-120534-removebg-preview.png" class="logo">
         <span class="text">GameBar</span>
     </div>
     <a href="/catalog/" class="games">Games</a>
     <a href="/favourite" class="fav">Fav</a>
-    <a href="#" class="news">News</a>
+    <a href="/news/" class="news">News</a>
     <form method="get" action="/catalog/">
         <input class="input" name="search" placeholder="Type here..." type="search">
     </form>
-        <div class="auth">
-        <a href="#">Login In</a>
-        <a href="#" class="singup"
+
+    <div class="auth">
+        {% if current_user.is_authenticated %}
+        <form method="POST" action="{{ url_for('logout') }}">
+            <button type="submit"
+                    class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none">Logout
+            </button>
+        </form>
+
+        {% else %}
+        <a href="/login/">Login In</a>
+        <a href="/register/" class="singup"
            style="background: oklch(0.577 0.245 27.325); border-radius: 10px; padding: 5px 10px;">Sign Up</a>
+        {% endif %}
     </div>
 </nav>
 
@@ -70,23 +90,6 @@
     </a>
     {% endfor %}
 </div>
-
-<div id="welcome" class="popup">
-    <div class="content">
-        <p class="text-2xl font-bold">🚨 Attention, attention! Website update! 🚨</p>
-        <p class="mt-4">Мы рады сообщить, что наш сайт был обновлён с новыми функциями!Благодарим за ваше терпение и
-            поддержку!</p>
-        <button onclick="closePopup()">OK</button>
-    </div>
-</div>
-
-<script>
-    function closePopup() {
-            document.getElementById('welcome').style.display = 'none';
-            localStorage.setItem('popupClosed', 'true');
-        }
-</script>
-
 
 </body>
 </html>
